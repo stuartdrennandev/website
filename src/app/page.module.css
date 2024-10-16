@@ -74,6 +74,7 @@
 
 .headerButton:hover {
   font-weight: bold;
+  cursor: pointer;
 }
 
 .header img {
