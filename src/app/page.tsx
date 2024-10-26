@@ -2,6 +2,13 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import profilePic from "../../public/profile-pic.jpeg"
 import Link from "next/link";
+import BlogOutline, { Blog } from "./components/BlogOutline";
+
+const dummyBlog: Blog = {
+  title: "My blog title",
+  description: "My blog description",
+  date: new Date()
+};
 
 export default function Home() {
   return (
@@ -26,8 +33,9 @@ export default function Home() {
 
         <h1>Stuart Drennan</h1>
 
-        <p>blogs incoming...</p>
+        <p>Hi there, I'm Stuart, a software engineer from Ireland. More about me&nbsp;<Link href="/about" className={styles.link}>here</Link>.</p>
 
+        <BlogOutline blog={dummyBlog} />
       </main>
     </div>
   );

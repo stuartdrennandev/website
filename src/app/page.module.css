@@ -82,3 +82,11 @@
 .header img {
   border-radius: 50%;
 }
+
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: lightblue;
+}
