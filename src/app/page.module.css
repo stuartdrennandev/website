@@ -85,6 +85,7 @@
 
 .link {
   text-decoration: underline;
+  color: aliceblue;
 }
 
 .link:hover {
