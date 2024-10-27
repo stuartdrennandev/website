@@ -1,34 +1,27 @@
 import styles from "./page.module.css";
-import Image from "next/image";
-import profilePic from "../../public/profile-pic.jpeg"
 import Link from "next/link";
+import BlogOutline from "./_components/blog-outline/BlogOutline";
+import { Blog } from "./_types/Blog";
+import Header from "./about/_components/header/Header";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <div className={styles.header}>
-          <Link href="/">
-            <Image
-              src={profilePic}
-              alt={"A picture of me!"}
-              title={"A picture of me!"}
-              height={150}
-            />
-          </Link>
+const dummyBlog: Blog = {
+  title: "My blog title",
+  description: "My blog description",
+  date: new Date()
+};
 
-          <div className={styles.headerButtonContainer}>
-            <Link href="/about"><div className={styles.headerButton}>About</div></Link>
-            <div className={styles.headerButton}>Resume</div>
-          </div>
+const Home: React.FC = () => (
+  <div className={styles.page}>
+    <main className={styles.main}>
+      <Header />
 
-        </div>
+      <h1>Stuart Drennan</h1>
 
-        <h1>Stuart Drennan</h1>
+      <p>Hi there, I'm Stuart, a software engineer from Ireland. More about me&nbsp;<Link href="/about" className={styles.link}>here</Link>.</p>
 
-        <p>blogs incoming...</p>
+      <BlogOutline blog={dummyBlog} />
+    </main>
+  </div>
+);
 
-      </main>
-    </div>
-  );
-}
+export default Home;
