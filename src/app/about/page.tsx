@@ -1,27 +1,10 @@
+import Header from "./_components/header/Header";
 import styles from "./page.module.css";
-import Image from "next/image";
-import profilePic from "../../../public/profile-pic.jpeg"
-import Link from "next/link";
 
 const Home: React.FC = () => (
     <div className={styles.page}>
         <main className={styles.main}>
-            <div className={styles.header}>
-                <Link href="/">
-                    <Image
-                        src={profilePic}
-                        alt={"A picture of me!"}
-                        title={"A picture of me!"}
-                        height={150}
-                    />
-                </Link>
-
-                <div className={styles.headerButtonContainer}>
-                    <Link href="/about"><div className={styles.headerButton}>About</div></Link>
-                    <div className={styles.headerButton}>Resume</div>
-                </div>
-
-            </div>
+            <Header />
 
             <h1>Stuart Drennan</h1>
 

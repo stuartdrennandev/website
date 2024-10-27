@@ -1,4 +1,4 @@
-import { Blog } from "../types/Blog";
+import { Blog } from "../../_types/Blog";
 import styles from "./BlogOutline.module.css";
 
 interface Props {
