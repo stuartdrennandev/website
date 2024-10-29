@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import BlogOutline from "./_components/blog-outline/BlogOutline";
 import { Blog } from "./_types/Blog";
-import Header from "./about/_components/header/Header";
+import Header from "./_components/header/Header";
 
 const dummyBlog: Blog = {
   title: "My blog title",
