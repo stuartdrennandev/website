@@ -16,7 +16,6 @@ const Header: React.FC = () => (
 
         <div className={styles.headerButtonContainer}>
             <Link href="/about"><div className={styles.headerButton}>About</div></Link>
-            <div className={styles.headerButton}>Resume</div>
         </div>
     </div>
 )
