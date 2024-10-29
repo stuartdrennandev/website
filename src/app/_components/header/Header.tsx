@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.css";
-import profilePic from "../../../../../public/profile-pic.jpeg"
+import profilePic from "@/public/profile-pic.jpeg";
 
 const Header: React.FC = () => (
     <div className={styles.header}>
@@ -16,6 +16,7 @@ const Header: React.FC = () => (
 
         <div className={styles.headerButtonContainer}>
             <Link href="/about"><div className={styles.headerButton}>About</div></Link>
+            <Link href="/blog"><div className={styles.headerButton}>Blog</div></Link>
         </div>
     </div>
 )

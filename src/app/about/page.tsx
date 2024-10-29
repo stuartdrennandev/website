@@ -1,4 +1,4 @@
-import Header from "./_components/header/Header";
+import Header from "../_components/header/Header";
 import styles from "./page.module.css";
 
 const Home: React.FC = () => (
