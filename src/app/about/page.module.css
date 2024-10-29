@@ -51,34 +51,3 @@
 .main p:first-of-type {
     margin-bottom: 12px;
 }
-
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: auto;
-    padding: 0 16px;
-    margin-bottom: 32px;
-}
-
-.headerButtonContainer {
-    display: flex;
-    flex-direction: row;
-    min-width: 0;
-    align-items: flex-end;
-}
-
-.headerButton {
-    display: flex;
-    justify-content: center;
-    min-width: 100px;
-}
-
-.headerButton:hover {
-    cursor: pointer;
-}
-
-.header img {
-    border-radius: 50%;
-}
