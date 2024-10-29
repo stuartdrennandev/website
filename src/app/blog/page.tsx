@@ -1,8 +1,7 @@
 import { useMemo } from "react";
-import Header from "../_components/header/Header";
 import { Blog } from "../_types/Blog";
-import BlogOutline from "../_components/blog-outline/BlogOutline";
-import styles from "./page.module.css";
+import BlogOutline from "./_components/blog-outline/BlogOutline";
+import PageLayout from "../_components/page-layout/PageLayout";
 
 const BlogHomepage: React.FC = () => {
     const blogs: Blog[] = useMemo(() => [
@@ -20,16 +19,13 @@ const BlogHomepage: React.FC = () => {
     ], []);
 
     return (
-        <div className={styles.page}>
-            <main className={styles.main}>
-                <Header />
-                <h1>Writing</h1>
+        <PageLayout>
+            <h1>Writing</h1>
 
-                {blogs.map((blog, index) => {
-                    return <BlogOutline blog={blog} key={index} />
-                })}
-            </main>
-        </div>
+            {blogs.map((blog, index) => {
+                return <BlogOutline blog={blog} key={index} />
+            })}
+        </PageLayout>
     );
 }
 
